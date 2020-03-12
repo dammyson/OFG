@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="end"
+    android:gravity="right"
+    android:background="@color/white"
+    android:clickable="true">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/padding_default"
+        android:paddingEnd="@dimen/padding_default"
+        android:paddingLeft="@dimen/padding_default"
+        android:paddingRight="@dimen/padding_default"
+        android:paddingStart="@dimen/padding_default"
+        android:paddingTop="@dimen/padding_default"
+        android:textAppearance="@style/TextAppearance.Medium"
+        android:gravity="right"
+        android:text="Region"/>
+
+    <Spinner
+        android:theme="@style/customSpinnerTheme"
+        android:id="@+id/region"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:entries="@array/region"
+        android:layout_marginTop="@dimen/padding_inline"
+        android:spinnerMode="dialog" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/padding_default"
+        android:paddingEnd="@dimen/padding_default"
+        android:paddingLeft="@dimen/padding_default"
+        android:paddingRight="@dimen/padding_default"
+        android:paddingStart="@dimen/padding_default"
+        android:paddingTop="@dimen/padding_default"
+        android:textAppearance="@style/TextAppearance.Medium"
+        android:gravity="right"
+        android:text="Currency"/>
+
+    <Spinner
+        android:theme="@style/customSpinnerTheme"
+        android:id="@+id/currency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:entries="@array/currency"
+        android:layout_marginTop="@dimen/padding_inline"
+        android:spinnerMode="dialog" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/padding_default"
+        android:paddingEnd="@dimen/padding_default"
+        android:paddingLeft="@dimen/padding_default"
+        android:paddingRight="@dimen/padding_default"
+        android:paddingStart="@dimen/padding_default"
+        android:paddingTop="@dimen/padding_default"
+        android:textAppearance="@style/TextAppearance.Medium"
+        android:gravity="right"
+        android:text="Price Range (NGN)"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingRight="@dimen/padding_default"
+        android:paddingStart="@dimen/padding_default"
+        android:paddingEnd="@dimen/padding_default"
+        android:paddingLeft="@dimen/padding_default">
+
+        <EditText
+            android:id="@+id/min_price"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:hint="Min price"
+            android:inputType="numberDecimal"
+            android:gravity="right"
+            android:maxLines="1"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance"
+            android:paddingLeft="@dimen/padding_default"
+            android:paddingRight="@dimen/padding_default"
+            android:text="to"/>
+
+        <EditText
+            android:id="@+id/max_price"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:hint="Max price"
+            android:inputType="numberDecimal"
+            android:gravity="right"
+            android:maxLines="1"/>
+
+    </LinearLayout>
+
+    <mehdi.sakout.fancybuttons.FancyButton
+        android:id="@+id/apply_filter"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/button_height"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:textStyle="bold"
+        app:fb_radius="2dp"
+        app:fb_iconPosition="left"
+        app:fb_fontIconSize="20sp"
+        app:fb_textGravity="center"
+        app:fb_iconPaddingRight="10dp"
+        app:fb_textSize="18sp"
+        app:fb_text="Apply filter"
+        app:fb_textColor="#ffffff"
+        app:fb_defaultColor="@color/colorPrimary"
+        app:fb_focusColor="@color/colorPrimaryDark"/>
+
+</LinearLayout>

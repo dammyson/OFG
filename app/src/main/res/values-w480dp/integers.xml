@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="ime_action_id_signin">769</integer>
+    <integer name="post_grid_num_columns">3</integer>
+    <integer name="product_grid_num_columns">2</integer>
+    <integer name="card_flip_time_full">300</integer>
+
+    <integer name="card_flip_time_half">150</integer>
+</resources>

@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_payment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ofidyExtra.ui.BankActivity"
+    android:background="@drawable/sbackground"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/appbar_padding_top"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/fh"
+                style="@style/Widget.AppCompat.TextView.SpinnerItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:text="Please make payment into the account below, use invoice number below as payment reference."
+                android:gravity="center_horizontal"
+                />
+
+            <TextView
+                android:id="@+id/bank_details"
+                style="@style/TextAppearance.Medium.Light"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:text="Bank details:" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"
+                android:padding="16dp">
+
+                <TableRow
+                    android:id="@+id/tr_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/table_row_bg"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/table_cell_bg"
+                        android:text="Bank Name" />
+
+
+                    <TextView
+                        android:id="@+id/bankname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        tools:text="Zenith Bank" />
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tr_item_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/table_row_bg"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/table_cell_bg"
+                        android:text="Acount Name" />
+
+                    <TextView
+                        android:id="@+id/billing_address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:text="SoftSkan Nigeria Limited" />
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tr_item_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/table_row_bg"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/table_cell_bg"
+                        android:text="Account Number" />
+
+                    <TextView
+                        android:id="@+id/shipping_address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:text="101 482 1173" />
+
+                </TableRow>
+                <TableRow
+                    android:id="@+id/tr_item_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/table_row_bg"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/table_cell_bg"
+                        android:text="Invoice Number" />
+
+                    <TextView
+                        android:id="@+id/invoice_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:text="101 482 1173" />
+
+                </TableRow>
+
+                <TableRow
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/table_row_last_bg">
+                    <!-- layout_span is table column span -->
+                    <TextView
+                        android:id="@+id/sub_total"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_span="5"
+                        android:text="Subtotal = $206.97"
+
+                        android:textStyle="italic" />
+
+                </TableRow>
+
+
+            </TableLayout>
+
+            <TextView
+                android:id="@+id/cancel_warning"
+                style="@style/Widget.AppCompat.TextView.SpinnerItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:text="An Email would be sent to you when you payment has been veified"
+                android:textColor="#F00"
+                android:gravity="center_horizontal"
+                />
+
+
+            <mehdi.sakout.fancybuttons.FancyButton
+                android:id="@+id/pay"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="@dimen/padding_large"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textStyle="bold"
+                app:fb_defaultColor="@color/colorPrimary"
+                app:fb_focusColor="@color/colorPrimaryDark"
+                app:fb_radius="2dp"
+                app:fb_text="Payment Made"
+                android:visibility="gone"
+                app:fb_textColor="#ffffff"
+                app:fb_textGravity="center"
+                app:fb_textSize="@dimen/text_size_xmedium" />
+
+            <mehdi.sakout.fancybuttons.FancyButton
+                android:id="@+id/retry"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="30dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textStyle="bold"
+                app:fb_defaultColor="@color/colorPrimary"
+                app:fb_focusColor="@color/colorPrimaryDark"
+                app:fb_radius="2dp"
+                app:fb_text="Cancel Payment and Continue-Shopping"
+                app:fb_textColor="#ffffff"
+                app:fb_textGravity="center"
+                app:fb_textSize="@dimen/text_size_xmedium" />
+
+            <ImageView
+                android:id="@+id/home"
+                android:layout_marginTop="40dp"
+                android:layout_width="120px"
+                android:layout_height="120px"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/homcon" />
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

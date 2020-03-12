@@ -1,0 +1,3 @@
+<resources>
+    <dimen name="nav_drawer_margin_offset">-16dp</dimen>
+</resources>

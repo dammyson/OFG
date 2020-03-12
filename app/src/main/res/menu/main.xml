@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/menu_search"
+        android:title="@string/action_search"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_search_white_24dp"
+        app:showAsAction="always" />
+
+    <item android:id="@+id/menu_cart"
+        android:title="Cart"
+        android:orderInCategory="101"
+        app:actionLayout="@layout/menu_action_item_badge"
+        android:icon="@drawable/ic_shopping_cart_white_24dp"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/menu_item_action_parameters"
+        android:title="Currency"
+        android:icon="@drawable/ic_local_atm_white_24dp"
+        app:showAsAction="ifRoom">
+        <menu>
+            <item
+                android:id="@+id/menu_naira"
+                android:title="NGN" />
+            <item
+                android:id="@+id/menu_dollar"
+                android:title="USD" />
+            <item
+                android:id="@+id/menu_pounds"
+                android:title="GBP" />
+        </menu>
+    </item>
+
+    <item android:id="@+id/menu_account"
+        android:title="My Account"
+        android:orderInCategory="102"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/menu_sign"
+        android:title="Sign In"
+        android:orderInCategory="103"
+        app:showAsAction="never"/>
+</menu>

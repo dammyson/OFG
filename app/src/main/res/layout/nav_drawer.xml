@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_gravity="start"
+    style="@style/NavDrawer"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/sbackground"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/padding_default"
+        android:paddingEnd="@dimen/padding_default"
+        android:paddingLeft="@dimen/padding_default"
+        android:paddingRight="@dimen/padding_default"
+        android:paddingStart="@dimen/padding_default"
+        android:paddingTop="@dimen/padding_default"
+        android:textAppearance="@style/TextAppearance.Dim"
+        android:text="Category"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/nav_list"
+        android:name="ng.com.oversabi.ui.fragment.CatalogFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutManager="LinearLayoutManager"
+        tools:listitem="@layout/category_view"/>
+
+</LinearLayout>

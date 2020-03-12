@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+android:paddingBottom="@dimen/activity_vertical_margin"
+android:paddingLeft="@dimen/activity_horizontal_margin"
+android:paddingRight="@dimen/activity_horizontal_margin"
+android:paddingTop="@dimen/activity_vertical_margin"
+tools:context="com.ofidy.ofidyshoppingbrowser.ofidyApp.ui.LoginActivity"
+android:background="@drawable/sbackground">
+
+<!-- Login progress -->
+<ProgressBar
+    android:id="@+id/login_progress"
+    style="?android:attr/progressBarStyle"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    android:layout_gravity="center"
+    android:visibility="gone"/>
+
+<android.support.v4.widget.NestedScrollView
+    android:id="@+id/login_form"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/email_login_form"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_gravity="center"
+            android:src="@drawable/logo_ofidy"
+            android:tint="@color/colorPrimaryDark"
+            android:transitionName="@string/splash_transition"
+            android:id="@+id/image"/>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/email_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <AutoCompleteTextView
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email or Username"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:singleLine="true"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/password_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/colorPrimaryDark">
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/prompt_password"
+                android:imeActionId="@+id/login"
+                android:imeActionLabel="@string/action_sign_in_short"
+                android:imeOptions="actionUnspecified"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:singleLine="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="6 or more characters"
+                android:textAppearance="@style/TextAppearance.XSmall.Dim"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+        <TextView
+            android:id="@+id/forgot_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.Small"
+            android:layout_marginTop="@dimen/padding_default"
+            android:text="Forgot password?"/>
+
+        <mehdi.sakout.fancybuttons.FancyButton
+            android:id="@+id/sign_in_button"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_marginTop="16dp"
+            android:textStyle="bold"
+            app:fb_radius="2dp"
+            app:fb_iconPosition="left"
+            app:fb_fontIconSize="20sp"
+            app:fb_textGravity="center"
+            app:fb_iconPaddingRight="10dp"
+            app:fb_textSize="18sp"
+            app:fb_text="@string/action_sign_in_short"
+            app:fb_textColor="#ffffff"
+            app:fb_defaultColor="@color/colorPrimary"
+            app:fb_focusColor="@color/colorPrimaryDark"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/padding_large">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="@color/ash"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding_default"
+                android:text="OR"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="@color/ash"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+        <mehdi.sakout.fancybuttons.FancyButton
+            android:id="@+id/fb"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_marginTop="16dp"
+            android:textStyle="bold"
+            app:fb_radius="2dp"
+            app:fb_iconPosition="left"
+            app:fb_fontIconSize="20sp"
+            app:fb_textGravity="center"
+            app:fb_iconPaddingRight="10dp"
+            app:fb_textSize="18sp"
+            app:fb_text="Login with Facebook"
+            app:fb_textColor="@color/text_primary_inverted"
+            app:fb_defaultColor="#39579B"
+            app:fb_focusColor="#6183d2"
+            app:fb_fontIconResource="&#xf230;"
+            android:visibility="gone"/>
+
+        <mehdi.sakout.fancybuttons.FancyButton
+            android:id="@+id/google"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_marginTop="16dp"
+            android:textStyle="bold"
+            app:fb_radius="2dp"
+            app:fb_iconPosition="left"
+            app:fb_fontIconSize="20sp"
+            app:fb_textGravity="center"
+            app:fb_iconPaddingRight="10dp"
+            app:fb_textSize="18sp"
+            app:fb_text="Login with Google +"
+            app:fb_textColor="@color/text_primary_inverted"
+            app:fb_defaultColor="#dc4e41"
+            app:fb_focusColor="#8A2319"
+            app:fb_fontIconResource="&#xf0d5;"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/sign_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_default"
+            android:layout_gravity="center|bottom"
+            android:textAppearance="@style/TextAppearance"
+            android:layout_marginTop="24dp"
+            android:text="Don't have an account? Sign up"/>
+
+        <mehdi.sakout.fancybuttons.FancyButton
+            android:id="@+id/guest"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_marginTop="16dp"
+            android:textStyle="bold"
+            app:fb_radius="2dp"
+            app:fb_iconPosition="left"
+            app:fb_fontIconSize="20sp"
+            app:fb_textGravity="center"
+            app:fb_iconPaddingRight="10dp"
+            app:fb_textSize="18sp"
+            app:fb_text="Continue as Guest"
+            app:fb_textColor="@color/text_primary_inverted"
+            app:fb_defaultColor="@color/colorPrimary"
+            app:fb_focusColor="@color/colorPrimaryDark"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>
+</FrameLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:padding="@dimen/padding_large"
+    android:minHeight="48dp"
+    android:background="?attr/selectableItemBackground">
+
+    <com.mikepenz.iconics.view.IconicsImageView
+        android:id="@+id/sub_category_icon"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        app:iiv_color="@color/text_primary"
+        app:iiv_icon="faw-book"
+        android:layout_marginRight="@dimen/padding_large"
+        android:layout_marginLeft="@dimen/padding_large"/>
+
+    <TextView
+        android:id="@+id/sub_category_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:maxLines="1"
+        android:textAppearance="@style/TextAppearance.XSmall"
+        android:text="Category"
+        android:ellipsize="end"/>
+
+
+</LinearLayout>

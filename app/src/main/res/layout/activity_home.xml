@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:background="@drawable/bgg">
+<ImageView
+    android:paddingTop="@dimen/padding_10"
+    android:layout_width="wrap_content"
+    android:layout_height="120dp"
+    android:src="@drawable/ofidylog"/>
+
+    <Button
+
+        android:id="@+id/modapp"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="102dp"
+        android:textColor="#fff"
+        android:background="@color/colorPrimary"
+        android:text="     Shop From Ofidy     " />
+
+
+    <Button
+        android:id="@+id/modbrow"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="44dp"
+        android:background="@color/text_primary_inverted"
+        android:text="     Shop From UK/US     " />
+</RelativeLayout>
